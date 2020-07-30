@@ -14,7 +14,7 @@ const server = http.createServer(app);
 const io = socketio.listen(server);
 
 /*CONECT TO MONGODB*/
-mongoose.connect('mongodb://localhost/char-database',{ useNewUrlParser: true , useUnifiedTopology: true})//ES "MONGODB" NO JUST MONGO
+mongoose.connect('mongodb+srv://adriana:adriana@cluster0.dwuia.mongodb.net/<dbname>?retryWrites=true&w=majority',{ useNewUrlParser: true , useUnifiedTopology: true})//ES "MONGODB" NO JUST MONGO
     .then(db => console.log('db is connected'))
     .catch(err => console.log(err));
 
